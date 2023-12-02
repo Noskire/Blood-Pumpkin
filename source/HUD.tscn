@@ -1,0 +1,255 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/HUD.tres" type="Theme" id=1]
+[ext_resource path="res://source/HUD.gd" type="Script" id=2]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+margin_bottom = 64.0
+theme = ExtResource( 1 )
+
+[node name="HBox" type="HBoxContainer" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -388.0
+margin_top = -20.0
+margin_right = 388.0
+margin_bottom = 20.0
+custom_constants/separation = 50
+
+[node name="MovesLeft" type="Label" parent="Control/HBox"]
+margin_top = 1.0
+margin_right = 228.0
+margin_bottom = 39.0
+text = "Moves Left: 15"
+align = 1
+
+[node name="PumpkinsCaught" type="Label" parent="Control/HBox"]
+margin_left = 278.0
+margin_top = 1.0
+margin_right = 606.0
+margin_bottom = 39.0
+text = "Pumpkins Caught: 0"
+align = 1
+
+[node name="Alert" type="Label" parent="Control/HBox"]
+margin_left = 656.0
+margin_top = 1.0
+margin_right = 776.0
+margin_bottom = 39.0
+text = "Alert: 0"
+align = 1
+
+[node name="Results" type="Control" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -341.0
+margin_top = -200.0
+margin_right = 341.0
+margin_bottom = 200.0
+theme = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="Results"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -341.0
+margin_top = -204.5
+margin_right = 341.0
+margin_bottom = 204.5
+color = Color( 0, 0, 0, 1 )
+
+[node name="VBox" type="VBoxContainer" parent="Results"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -309.0
+margin_top = -168.0
+margin_right = 309.0
+margin_bottom = 168.0
+custom_constants/separation = 25
+
+[node name="Level" type="Label" parent="Results/VBox"]
+margin_right = 618.0
+margin_bottom = 38.0
+text = "Level Completed"
+align = 1
+
+[node name="TotalMoves" type="Label" parent="Results/VBox"]
+margin_top = 63.0
+margin_right = 618.0
+margin_bottom = 101.0
+text = "Total moves: xx"
+
+[node name="TotalPumpkins" type="Label" parent="Results/VBox"]
+margin_top = 126.0
+margin_right = 618.0
+margin_bottom = 164.0
+text = "Total pumpkins caught: xx"
+
+[node name="TotalAlerts" type="Label" parent="Results/VBox"]
+margin_top = 189.0
+margin_right = 618.0
+margin_bottom = 227.0
+text = "Total alerts: xx"
+
+[node name="Continue" type="Button" parent="Results/VBox"]
+margin_top = 252.0
+margin_right = 618.0
+margin_bottom = 296.0
+text = "Start next level"
+
+[node name="Win" type="Control" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -341.0
+margin_top = -200.0
+margin_right = 341.0
+margin_bottom = 200.0
+theme = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="Win"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -341.0
+margin_top = -204.5
+margin_right = 341.0
+margin_bottom = 204.5
+color = Color( 0, 0, 0, 1 )
+
+[node name="VBox" type="VBoxContainer" parent="Win"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -309.0
+margin_top = -179.5
+margin_right = 309.0
+margin_bottom = 179.5
+custom_constants/separation = 25
+
+[node name="Win" type="Label" parent="Win/VBox"]
+margin_right = 618.0
+margin_bottom = 38.0
+text = "YOU WIN"
+align = 1
+
+[node name="TotalMoves" type="Label" parent="Win/VBox"]
+margin_top = 63.0
+margin_right = 618.0
+margin_bottom = 101.0
+text = "Total moves: xx"
+
+[node name="TotalPumpkins" type="Label" parent="Win/VBox"]
+margin_top = 126.0
+margin_right = 618.0
+margin_bottom = 164.0
+text = "Total pumpkins caught: xx"
+
+[node name="TotalAlerts" type="Label" parent="Win/VBox"]
+margin_top = 189.0
+margin_right = 618.0
+margin_bottom = 227.0
+text = "Total alerts: xx"
+
+[node name="TotalScore" type="Label" parent="Win/VBox"]
+margin_top = 252.0
+margin_right = 618.0
+margin_bottom = 290.0
+text = "Score: xx"
+
+[node name="TryAgain" type="Button" parent="Win/VBox"]
+margin_top = 315.0
+margin_right = 618.0
+margin_bottom = 359.0
+text = "Try Again"
+
+[node name="Lose" type="Control" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -341.0
+margin_top = -200.0
+margin_right = 341.0
+margin_bottom = 200.0
+theme = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="Lose"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -341.0
+margin_top = -204.5
+margin_right = 341.0
+margin_bottom = 204.5
+color = Color( 0, 0, 0, 1 )
+
+[node name="VBox" type="VBoxContainer" parent="Lose"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -309.0
+margin_top = -179.5
+margin_right = 309.0
+margin_bottom = 179.5
+custom_constants/separation = 25
+
+[node name="Win" type="Label" parent="Lose/VBox"]
+margin_right = 618.0
+margin_bottom = 38.0
+text = "YOU LOSE"
+align = 1
+
+[node name="TotalMoves" type="Label" parent="Lose/VBox"]
+margin_top = 63.0
+margin_right = 618.0
+margin_bottom = 101.0
+text = "Total moves: xx"
+
+[node name="TotalPumpkins" type="Label" parent="Lose/VBox"]
+margin_top = 126.0
+margin_right = 618.0
+margin_bottom = 164.0
+text = "Total pumpkins caught: xx"
+
+[node name="TotalAlerts" type="Label" parent="Lose/VBox"]
+margin_top = 189.0
+margin_right = 618.0
+margin_bottom = 227.0
+text = "Total alerts: xx"
+
+[node name="RestartLevel" type="Button" parent="Lose/VBox"]
+margin_top = 252.0
+margin_right = 618.0
+margin_bottom = 296.0
+text = "Restart Level"
+
+[node name="RestartAll" type="Button" parent="Lose/VBox"]
+margin_top = 321.0
+margin_right = 618.0
+margin_bottom = 365.0
+text = "Restart Level 1"
+
+[connection signal="button_up" from="Results/VBox/Continue" to="." method="_on_Continue_button_up"]
+[connection signal="button_up" from="Win/VBox/TryAgain" to="." method="_on_TryAgain_button_up"]
+[connection signal="button_up" from="Lose/VBox/RestartLevel" to="." method="_on_RestartLevel_button_up"]
+[connection signal="button_up" from="Lose/VBox/RestartAll" to="." method="_on_RestartAll_button_up"]

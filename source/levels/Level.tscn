@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://source/TileMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://source/Pumpkin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://source/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://source/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://source/Exit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://source/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://source/Crow.tscn" type="PackedScene" id=7]
+[ext_resource path="res://source/ScareCrow.tscn" type="PackedScene" id=8]
+[ext_resource path="res://source/Day'n'Night.tscn" type="PackedScene" id=9]
+[ext_resource path="res://source/LampPost.tscn" type="PackedScene" id=10]
+[ext_resource path="res://source/Obstacle.tscn" type="PackedScene" id=11]
+
+[node name="Level" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource( 3 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+
+[node name="Pumpkins" type="Node" parent="."]
+
+[node name="Pumpkin" parent="Pumpkins" instance=ExtResource( 2 )]
+pos = Vector2( 3, 3 )
+
+[node name="Pumpkin2" parent="Pumpkins" instance=ExtResource( 2 )]
+pos = Vector2( 6, 3 )
+
+[node name="Pumpkin3" parent="Pumpkins" instance=ExtResource( 2 )]
+pos = Vector2( 9, 3 )
+
+[node name="Pumpkin4" parent="Pumpkins" instance=ExtResource( 2 )]
+pos = Vector2( 12, 3 )
+
+[node name="Pumpkin5" parent="Pumpkins" instance=ExtResource( 2 )]
+pos = Vector2( 3, 6 )
+
+[node name="Pumpkin6" parent="Pumpkins" instance=ExtResource( 2 )]
+pos = Vector2( 6, 6 )
+
+[node name="Pumpkin7" parent="Pumpkins" instance=ExtResource( 2 )]
+pos = Vector2( 9, 6 )
+
+[node name="Pumpkin8" parent="Pumpkins" instance=ExtResource( 2 )]
+pos = Vector2( 12, 6 )
+
+[node name="Light" type="Node" parent="."]
+
+[node name="LampPost" parent="Light" instance=ExtResource( 10 )]
+position = Vector2( 64, 64 )
+
+[node name="LampPost2" parent="Light" instance=ExtResource( 10 )]
+position = Vector2( 960, 64 )
+
+[node name="LampPost3" parent="Light" instance=ExtResource( 10 )]
+position = Vector2( 64, 576 )
+
+[node name="LampPost4" parent="Light" instance=ExtResource( 10 )]
+position = Vector2( 960, 576 )
+
+[node name="Crow" parent="." instance=ExtResource( 7 )]
+pos = Vector2( 3, 6 )
+
+[node name="ScareCrow" parent="." instance=ExtResource( 8 )]
+
+[node name="Obstacle" parent="." instance=ExtResource( 11 )]
+pos = Vector2( 8, 8 )
+
+[node name="Exit" parent="." instance=ExtResource( 5 )]
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="Day\'n\'Night" parent="." instance=ExtResource( 9 )]

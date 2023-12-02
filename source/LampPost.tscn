@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/light.png" type="Texture" id=1]
+
+[node name="LampPost" type="Node2D"]
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 1 )
+texture_scale = 2.0
+color = Color( 1, 0.596078, 0.607843, 1 )
+energy = 0.6
